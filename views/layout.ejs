@@ -4,25 +4,23 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>About Me</title>
+	<title>Basic Informational Site</title>
 </head>
 <body>
-	<h1>About Me</h1>
-	<p>
-		I'm a 25 year old guy from planet Earth, self-teaching Software Development.
-	</p>	
-	<a href="/">Return Home</a>
+	<h1><%- title %> </h1>
+	<%- body %>
+	<% if (title !== 'Welcome Home') { %>
+		<br>
+		<a href="/">Return Home</a>
+	<% } %>
 </body>
 
 <style>
 	body {
-		margin-top: 15vh;
-	}
-
-	h1, p, a {
-		display: flex;
+		display: grid;
 		place-items: center;
 		justify-content: center;
+		text-align: center;
 	}
 </style>
 </html>
